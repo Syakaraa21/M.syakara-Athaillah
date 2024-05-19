@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Percabangan IF ELSE</title>
+    <script>
+        function cekAngka() {
+            // Mendapatkan nilai dari input
+            var angka = parseInt(document.getElementById("angka").value);
+            
+            // Percabangan IF ELSE
+            if (!isNaN(angka)) {
+                if (angka > 0) {
+                    document.getElementById("hasil").innerHTML = "Angka yang dimasukkan positif";
+                } else if (angka < 0) {
+                    document.getElementById("hasil").innerHTML = "Angka yang dimasukkan negatif";
+                } else {
+                    document.getElementById("hasil").innerHTML = "Angka yang dimasukkan adalah nol";
+                }
+            } else {
+                document.getElementById("hasil").innerHTML = "Masukkan angka yang valid";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Program Percabangan IF ELSE</h2>
+    <label for="angka">Masukkan Angka:</label>
+    <input type="number" id="angka"><br><br>
+    
+    <button onclick="cekAngka()">Cek Angka</button><br><br>
+    
+    <div id="hasil"></div>
+</body>
+</html>
